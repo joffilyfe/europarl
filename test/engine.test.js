@@ -14,11 +14,14 @@ jest.unstable_mockModule('../src/engine/fetcher.js', () => ({
   fetch: jest.fn()
 }))
 
-const cheerio = await import('cheerio');
-const { fetch } = await import('../src/engine/fetcher.js');
+let fetch
+let cheerio
 
 describe('Scraper function', () => {
-  beforeEach(() => {
+  beforeEach(async () => {
+    cheerio = await import('cheerio')
+    fetch = (await import('../src/engine/fetcher.js')).fetch
+
     cheerio.load.mockClear()
     fetch.mockClear()
   })
