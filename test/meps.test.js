@@ -5,7 +5,7 @@ test('legislators', async () => {
 
   // This number can fluctuate, feel free to update the test if it's the case.
   expect(Array.isArray(legislators)).toBeTruthy()
-  expect(legislators.length).toBe(704)
+  expect(legislators.length).toBe(705)
 
   const first = legislators[0]
   expect(first.name).toBe('Magdalena ADAMOWICZ')
