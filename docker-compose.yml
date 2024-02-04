@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  scraper:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: node:16.20.2
+    volumes:
+      - .:/app
+      - ./node_modules:/app/node_modules
