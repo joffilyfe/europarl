@@ -1,6 +1,6 @@
 import axios from 'axios'
 import delay from 'delay'
-import { logger } from './logger'
+import { logger } from './logger.js'
 
 const ScraperConfig = {
   headers: {
